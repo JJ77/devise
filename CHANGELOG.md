@@ -8,6 +8,7 @@
   * Allow a resource to be found based on its encrypted password token (by @karlentwistle)
 
 * bug fix
+  * Check if there is a logged in user before executing the `SessionsController#destroy`.
   * `SessionsController#destroy` no longer yields the `resource` to receiving block,
     since the resource isn't loaded in the action. If you need access to the current
     resource when overring the action use the scope helper (like `current_user`) before
